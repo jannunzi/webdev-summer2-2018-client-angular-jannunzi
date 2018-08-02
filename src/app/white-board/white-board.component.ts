@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {CourseServiceClient} from '../services/course.service.client';
 
 @Component({
   selector: 'app-white-board',
@@ -8,24 +7,9 @@ import {CourseServiceClient} from '../services/course.service.client';
 })
 export class WhiteBoardComponent implements OnInit {
 
-  courses = [];
-  selectedCourse = {};
-  selectedModule = {};
-
-  constructor(private courseService: CourseServiceClient) { }
-
-  selectCourse(course) {
-    this.selectedCourse = course;
-    this.selectedModule = {};
-  }
-  selectModule(module) {
-    this.selectedModule = module;
-  }
+  constructor() { }
 
   ngOnInit() {
-    this.courseService
-      .findAllCourses()
-      .then(courses => this.courses = courses);
   }
 
 }
