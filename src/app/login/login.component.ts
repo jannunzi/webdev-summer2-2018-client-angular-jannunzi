@@ -12,7 +12,8 @@ export class LoginComponent implements OnInit {
   username: String;
   password: String;
 
-  constructor(private router: Router, private userService: UserServiceClient) { }
+  constructor(private router: Router,
+              private userService: UserServiceClient) { }
 
   login = (username, password) => {
     const user = {
